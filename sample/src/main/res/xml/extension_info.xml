@@ -1,0 +1,5 @@
+<mpt-extension name="Default Screens" author="Noorzaini Ilhami">
+    <screens>
+        <screen name="Prayer List" view="com.i906.mpt.sample.PrayerListView" />
+    </screens>
+</mpt-extension>

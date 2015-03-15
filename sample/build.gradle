@@ -6,7 +6,7 @@ android {
     buildToolsVersion "22.0.0"
 
     defaultConfig {
-        applicationId "com.i906.mpt.extension"
+        applicationId "com.i906.mpt.sample"
         minSdkVersion 16
         targetSdkVersion 22
         versionCode 1
@@ -22,5 +22,7 @@ android {
 }
 
 dependencies {
+    compile project(':extension')
     compile 'com.android.support:appcompat-v7:22.0.0'
+    compile 'com.jakewharton:butterknife:6.1.0'
 }

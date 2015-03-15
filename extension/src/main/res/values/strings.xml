@@ -1,3 +1,29 @@
 <resources>
-    <string name="app_name">PrayerView</string>
+
+    <string-array name="mpt_prayer_names">
+        <item>Imsak</item>
+        <item>Subuh</item>
+        <item>Syuruk</item>
+        <item>Dhuha</item>
+        <item>Zohor</item>
+        <item>Asar</item>
+        <item>Maghrib</item>
+        <item>Isyak</item>
+    </string-array>
+
+    <string-array name="mpt_hijri_dates">
+        <item>Muharram</item>
+        <item>Safar</item>
+        <item>Rabiulawal</item>
+        <item>Rabiulakhir</item>
+        <item>Jamadilawal</item>
+        <item>Jamadilakhir</item>
+        <item>Rejab</item>
+        <item>Syaaban</item>
+        <item>Ramadhan</item>
+        <item>Syawal</item>
+        <item>Zulkaedah</item>
+        <item>Zulhijjah</item>
+    </string-array>
+
 </resources>

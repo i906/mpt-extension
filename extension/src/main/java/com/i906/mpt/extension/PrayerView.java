@@ -4,6 +4,10 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.widget.FrameLayout;
 
+/**
+ * A view that need to be subclassed by the extensions. The subclassed view will be then displayed
+ * in Malaysia Prayer Times' main view if selected by the user.
+ */
 public abstract class PrayerView extends FrameLayout {
 
     protected static final int VERSION = 1;
@@ -22,30 +26,50 @@ public abstract class PrayerView extends FrameLayout {
         super(context, attrs, defStyleAttr);
     }
 
+    /**
+     * Used by the host to determine the PrayerView's version.
+     */
     public final int getExtensionVersion() {
         return VERSION;
     }
 
+    /**
+     * Retrieves the interface to access relevant data from the host.
+     *
+     * @return The prayer interface
+     * @see #setInterface(PrayerInterface)
+     */
     public final PrayerInterface getInterface() {
         return mInterface;
     }
 
+    /**
+     * Used by the host to provide data to the PrayerView.
+     *
+     * @see #getInterface()
+     */
     public final void setInterface(PrayerInterface prayerInterface) {
         mInterface = prayerInterface;
         onInterfaceLoaded();
     }
 
+    /**
+     * Called when the prayer interface is attached to this PrayerView.
+     *
+     * <p>Subclasses of PrayerView may want to bind views with the data accessed through the prayer
+     * interface as it gets loaded.</p>
+     *
+     * @see #getInterface()
+     */
     public void onInterfaceLoaded() { }
 
-    public void onPrayerTimesChanged() {
-        onPrayerTimesChanged(mInterface.getCurrentPrayerIndex());
-    }
+    /**
+     * Called when the prayer time has changed.
+     */
+    public void onPrayerTimesChanged() { }
 
-    public void onPrayerTimesChanged(@PrayerInterface.PrayerType int currentPrayerIndex) { }
-
-    public void onHijriDateChanged(int[] dates) { }
-
-    public void onMasihiDateChanged(int[] dates) { }
-
-    public void onLocationChanged(String location) { }
+    /**
+     * Called when the location has changed.
+     */
+    public void onLocationChanged() { }
 }
