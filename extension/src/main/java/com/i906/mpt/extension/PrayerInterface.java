@@ -1,6 +1,7 @@
 package com.i906.mpt.extension;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  * An interface used by Malaysia Prayer Times to provide access to its data in the extensions.
@@ -55,6 +56,13 @@ public interface PrayerInterface {
      * @see #getCurrentPrayerIndex()
      */
     int getNextPrayerIndex();
+
+    /**
+     * Retrieves all prayer times for the current day.
+     *
+     * @return An array of prayer times for the current day
+     */
+    List<Date> getCurrentDayPrayerTimes();
 
     /**
      * Retrieves the hijri date.
