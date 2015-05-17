@@ -1,5 +1,9 @@
 package com.i906.mpt.extension;
 
+import android.support.annotation.IntDef;
+
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
 import java.util.Date;
 import java.util.List;
 
@@ -20,6 +24,12 @@ public interface PrayerInterface {
     int DATE_DATE = 0;
     int DATE_MONTH = 1;
     int DATE_YEAR = 2;
+
+    int ERROR_OTHER = 0;
+    int ERROR_NETWORK = 1;
+    int ERROR_CONVERSION = 2;
+    int ERROR_HTTP = 3;
+    int ERROR_LOCATION = 4;
 
     /**
      * Retrieves the current prayer time.
@@ -84,4 +94,28 @@ public interface PrayerInterface {
      * @return The Malaysia Prayer Times' version
      */
     int getAppVersion();
+
+    /**
+     * Instructs the host to refresh the prayer times.
+     */
+    void refresh();
+
+    /**
+     * Check whether the prayer times is already loaded.
+     */
+    boolean isPrayerTimesLoaded();
+
+    void addPrayerListener(PrayerListener listener);
+
+    void removePrayerListener(PrayerListener listener);
+
+    @Retention(RetentionPolicy.SOURCE)
+    @IntDef({ERROR_OTHER, ERROR_NETWORK, ERROR_CONVERSION, ERROR_HTTP, ERROR_LOCATION})
+    @interface ErrorType {}
+
+    interface PrayerListener {
+        void onPrayerTimesChanged();
+        void onLocationChanged();
+        void onError(@ErrorType int type, String code);
+    }
 }

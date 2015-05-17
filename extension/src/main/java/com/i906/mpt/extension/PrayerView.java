@@ -8,7 +8,7 @@ import android.widget.FrameLayout;
  * A view that need to be subclassed by the extensions. The subclassed view will be then displayed
  * in Malaysia Prayer Times' main view if selected by the user.
  */
-public abstract class PrayerView extends FrameLayout {
+public abstract class PrayerView extends FrameLayout implements PrayerInterface.PrayerListener {
 
     protected static final int VERSION = 1;
 
@@ -51,6 +51,11 @@ public abstract class PrayerView extends FrameLayout {
     public final void setInterface(PrayerInterface prayerInterface) {
         mInterface = prayerInterface;
         onInterfaceLoaded();
+        setupListeners();
+    }
+
+    protected void setupListeners() {
+        mInterface.addPrayerListener(this);
     }
 
     /**
@@ -66,10 +71,24 @@ public abstract class PrayerView extends FrameLayout {
     /**
      * Called when the prayer time has changed.
      */
+    @Override
     public void onPrayerTimesChanged() { }
 
     /**
      * Called when the location has changed.
      */
+    @Override
     public void onLocationChanged() { }
+
+    /**
+     * Called when an error occured while trying to get prayer times.
+     */
+    @Override
+    public void onError(@PrayerInterface.ErrorType int type, String code) { }
+
+    @Override
+    protected void onDetachedFromWindow() {
+        super.onDetachedFromWindow();
+        mInterface.removePrayerListener(this);
+    }
 }
