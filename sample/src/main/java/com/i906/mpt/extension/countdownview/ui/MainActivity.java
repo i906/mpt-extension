@@ -1,12 +1,12 @@
-package com.i906.mpt.sample;
+package com.i906.mpt.extension.countdownview.ui;
 
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.widget.FrameLayout;
 
-import com.i906.mpt.extension.PrayerInterface;
-
-import java.util.Date;
+import com.i906.mpt.extension.countdownview.R;
+import com.i906.mpt.extension.countdownview.view.CountdownView;
+import com.i906.mpt.extension.countdownview.view.TestingPrayerInterface;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -25,7 +25,7 @@ public class MainActivity extends ActionBarActivity {
         ButterKnife.inject(this);
 
         mInterface = new TestingPrayerInterface();
-        PrayerListView plv = new PrayerListView(this);
+        CountdownView plv = new CountdownView(this);
         plv.setInterface(mInterface);
 
         mFrameView.addView(plv);

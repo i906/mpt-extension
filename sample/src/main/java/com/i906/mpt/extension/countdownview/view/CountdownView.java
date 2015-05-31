@@ -1,4 +1,4 @@
-package com.i906.mpt.sample;
+package com.i906.mpt.extension.countdownview.view;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -6,28 +6,29 @@ import android.view.LayoutInflater;
 import android.widget.TextView;
 
 import com.i906.mpt.extension.PrayerView;
+import com.i906.mpt.extension.countdownview.R;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class PrayerListView extends PrayerView {
+public class CountdownView extends PrayerView {
 
     protected SimpleDateFormat mDateFormatter;
     protected String[] mPrayerNames;
     protected TextView mCurrentTimeView;
     protected TextView mCurrentPrayerView;
 
-    public PrayerListView(Context context) {
+    public CountdownView(Context context) {
         this(context, null);
     }
 
-    public PrayerListView(Context context, AttributeSet attrs) {
+    public CountdownView(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public PrayerListView(Context context, AttributeSet attrs, int defStyleAttr) {
+    public CountdownView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        LayoutInflater.from(context).inflate(R.layout.view_prayer_list, this, true);
+        LayoutInflater.from(context).inflate(R.layout.view_prayer_countdown, this, true);
         mDateFormatter = new SimpleDateFormat("hh:mm");
         mPrayerNames = getResources().getStringArray(R.array.mpt_prayer_names);
         mCurrentTimeView = (TextView) findViewById(R.id.tv_current_time);

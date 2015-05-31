@@ -1,4 +1,4 @@
-package com.i906.mpt.sample;
+package com.i906.mpt.extension.countdownview.view;
 
 import com.i906.mpt.extension.PrayerInterface;
 
@@ -10,6 +10,8 @@ import java.util.List;
 public class TestingPrayerInterface implements PrayerInterface {
 
     protected List<Date> mTestDateList;
+    protected PrayerListener mPrayerListener;
+    protected boolean mLoaded = false;
 
     public TestingPrayerInterface() {
 
@@ -48,6 +50,9 @@ public class TestingPrayerInterface implements PrayerInterface {
         c.set(Calendar.HOUR_OF_DAY, 20);
         c.set(Calendar.MINUTE, 36);
         mTestDateList.add(c.getTime());
+
+        mLoaded = true;
+        if (mPrayerListener != null) mPrayerListener.onPrayerTimesChanged();
     }
 
     @Override
@@ -81,6 +86,11 @@ public class TestingPrayerInterface implements PrayerInterface {
     }
 
     @Override
+    public List<Date> getCurrentDayPrayerTimes() {
+        return mTestDateList;
+    }
+
+    @Override
     public int[] getHijriDate() {
         return new int[] { 22, 4, 1436 } ;
     }
@@ -93,5 +103,30 @@ public class TestingPrayerInterface implements PrayerInterface {
     @Override
     public int getAppVersion() {
         return 2631;
+    }
+
+    @Override
+    public void refresh() {
+
+    }
+
+    @Override
+    public boolean isPrayerTimesLoaded() {
+        return mLoaded;
+    }
+
+    @Override
+    public void onPrayerExtensionCrashed(Throwable t) {
+        t.printStackTrace();
+    }
+
+    @Override
+    public void addPrayerListener(PrayerListener listener) {
+        mPrayerListener = listener;
+    }
+
+    @Override
+    public void removePrayerListener(PrayerListener listener) {
+        mPrayerListener = null;
     }
 }

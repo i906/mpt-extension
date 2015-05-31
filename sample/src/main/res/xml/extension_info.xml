@@ -1,5 +1,5 @@
 <mpt-extension name="Default Screens" author="Noorzaini Ilhami">
     <screens>
-        <screen name="Prayer List" view="com.i906.mpt.sample.PrayerListView" />
+        <screen name="Prayer Countdown" view="com.i906.mpt.extension.countdownview.view.CountdownView" />
     </screens>
 </mpt-extension>

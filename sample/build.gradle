@@ -3,10 +3,10 @@ apply plugin: 'com.android.application'
 android {
 
     compileSdkVersion 22
-    buildToolsVersion "22.0.0"
+    buildToolsVersion "22.0.1"
 
     defaultConfig {
-        applicationId "com.i906.mpt.sample"
+        applicationId "com.i906.mpt.extension.countdownview"
         minSdkVersion 16
         targetSdkVersion 22
         versionCode 1
@@ -23,6 +23,6 @@ android {
 
 dependencies {
     compile project(':extension')
-    compile 'com.android.support:appcompat-v7:22.0.0'
+    compile 'com.android.support:appcompat-v7:22.2.0'
     compile 'com.jakewharton:butterknife:6.1.0'
 }
