@@ -62,7 +62,17 @@ public class TestingPrayerInterface implements PrayerInterface {
 
     @Override
     public Date getNextPrayerTime() {
-        return mTestDateList.get(getCurrentPrayerIndex());
+        int npi = getNextPrayerIndex();
+        Date d = mTestDateList.get(npi);
+
+        if (npi == 0) {
+            Calendar c = Calendar.getInstance();
+            c.setTime(d);
+            c.add(Calendar.DATE, 1);
+            return c.getTime();
+        }
+
+        return d;
     }
 
     @Override

@@ -1,7 +1,6 @@
 <resources>
 
-    <!-- Error Container -->
-
+    <dimen name="margin_container_top">-48dp</dimen>
     <dimen name="padding_error_container">16dp</dimen>
 
 </resources>

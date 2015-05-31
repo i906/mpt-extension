@@ -8,22 +8,16 @@ import com.i906.mpt.extension.countdownview.R;
 import com.i906.mpt.extension.countdownview.view.CountdownView;
 import com.i906.mpt.extension.countdownview.view.TestingPrayerInterface;
 
-import butterknife.ButterKnife;
-import butterknife.InjectView;
-
 public class MainActivity extends ActionBarActivity {
 
     protected TestingPrayerInterface mInterface;
-
-    @InjectView(R.id.frame)
     protected FrameLayout mFrameView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ButterKnife.inject(this);
-
+        mFrameView = (FrameLayout) findViewById(R.id.frame);
         mInterface = new TestingPrayerInterface();
         CountdownView plv = new CountdownView(this);
         plv.setInterface(mInterface);

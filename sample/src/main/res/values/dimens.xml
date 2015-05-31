@@ -3,8 +3,9 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
 
-    <!-- Error Container -->
-
+    <dimen name="margin_container_top">-56dp</dimen>
+    <dimen name="size_first_line">18sp</dimen>
+    <dimen name="padding_first_line">32dp</dimen>
     <dimen name="padding_error_container">64dp</dimen>
 
 </resources>

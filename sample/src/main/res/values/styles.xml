@@ -14,6 +14,20 @@
         <item name="android:paddingBottom">16dp</item>
         <item name="android:paddingLeft">16dp</item>
         <item name="android:paddingRight">16dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="PrayerCountdown.Countdown" parent="Base.TextAppearance.AppCompat.Display3">
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:gravity">center</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/mpt_color_accent</item>
+    </style>
+
+    <style name="PrayerCountdown.CountdownLabel" parent="Base.TextAppearance.AppCompat.Button">
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:gravity">center</item>
     </style>
 
     <style name="PrayerCountdown.ErrorContainer">
@@ -25,6 +39,12 @@
         <item name="android:layout_marginTop">32dp</item>
         <item name="android:fontFamily">sans-serif-light</item>
         <item name="android:gravity">center</item>
+    </style>
+
+    <style name="PrayerCountdown.FirstLine">
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">@dimen/padding_first_line</item>
+        <item name="android:paddingRight">@dimen/padding_first_line</item>
     </style>
 
     <style name="PrayerCountdown.LargeIcon">
@@ -40,10 +60,33 @@
         <item name="android:src">@drawable/ic_prayer_progress</item>
     </style>
 
+    <style name="PrayerCountdown.Location" parent="PrayerCountdown.NextPrayerTime">
+        <item name="android:textColor">@color/mpt_grey</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="PrayerCountdown.LocationIcon">
+        <item name="android:layout_width">16dp</item>
+        <item name="android:layout_height">16dp</item>
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:src">@drawable/ic_place</item>
+        <item name="android:tint">@color/mpt_grey</item>
+    </style>
+
     <style name="PrayerCountdown.NextPrayer" parent="Base.TextAppearance.AppCompat.Display3">
         <item name="android:fontFamily">sans-serif-light</item>
         <item name="android:gravity">center</item>
-        <item name="android:textColor">@color/mpt_color_accent</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+
+    <style name="PrayerCountdown.NextPrayerTime">
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">@dimen/size_first_line</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
     </style>
 
 </resources>
