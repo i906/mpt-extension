@@ -2,29 +2,49 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <LinearLayout
+        android:id="@+id/content_container"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="16dp"
-        android:orientation="vertical">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        style="@style/PrayerCountdown.Contents"
+        tools:visibility="visible"
+        tools:layout_marginTop="56dp">
 
         <TextView
-            android:id="@+id/tv_current_time"
+            android:id="@+id/tv_next_prayer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textColor="#f00"
-            tools:text="09:06"
-            style="@style/TextAppearance.AppCompat.Display3" />
-
-        <TextView
-            android:id="@+id/tv_current_prayer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textColor="#f00"
             tools:text="Maghrib"
-            style="@style/TextAppearance.AppCompat.Medium" />
+            style="@style/PrayerCountdown.NextPrayer" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:src="@drawable/ic_divider" />
 
     </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/progress_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:visibility="gone">
+
+        <include layout="@layout/view_prayer_progress" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/error_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        tools:visibility="gone">
+
+        <include layout="@layout/view_prayer_error" />
+
+    </FrameLayout>
 
 </merge>

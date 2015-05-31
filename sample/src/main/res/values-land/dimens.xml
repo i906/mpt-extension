@@ -1,0 +1,7 @@
+<resources>
+
+    <!-- Error Container -->
+
+    <dimen name="padding_error_container">16dp</dimen>
+
+</resources>

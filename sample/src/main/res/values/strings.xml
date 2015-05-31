@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">MPT Sample Extension</string>
+    <string name="app_name">MPT Countdown Extension</string>
+    <string name="label_retry">Retry</string>
 </resources>
