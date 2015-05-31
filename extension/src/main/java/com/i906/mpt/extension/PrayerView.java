@@ -50,8 +50,13 @@ public abstract class PrayerView extends FrameLayout implements PrayerInterface.
      */
     public final void setInterface(PrayerInterface prayerInterface) {
         mInterface = prayerInterface;
-        onInterfaceLoaded();
-        setupListeners();
+
+        try {
+            onInterfaceLoaded();
+            setupListeners();
+        } catch (Throwable e) {
+            mInterface.onPrayerExtensionCrashed(e);
+        }
     }
 
     protected void setupListeners() {

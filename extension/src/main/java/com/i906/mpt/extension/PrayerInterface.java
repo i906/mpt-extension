@@ -1,6 +1,7 @@
 package com.i906.mpt.extension;
 
 import android.support.annotation.IntDef;
+import android.support.annotation.Nullable;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
@@ -38,6 +39,7 @@ public interface PrayerInterface {
      * @see #getCurrentPrayerIndex()
      * @see #getNextPrayerTime()
      */
+    @Nullable
     Date getCurrentPrayerTime();
 
     /**
@@ -47,10 +49,11 @@ public interface PrayerInterface {
      * @see #getNextPrayerIndex()
      * @see #getCurrentPrayerTime()
      */
+    @Nullable
     Date getNextPrayerTime();
 
     /**
-     * Retrieves the current prayer time index.
+     * Retrieves the current prayer time index. May return -1 if prayer times is not yet loaded.
      *
      * @return The current prayer time index
      * @see #getCurrentPrayerTime()
@@ -59,7 +62,7 @@ public interface PrayerInterface {
     int getCurrentPrayerIndex();
 
     /**
-     * Retrieves the next prayer time index.
+     * Retrieves the next prayer time index. May return -1 if prayer times is not yet loaded.
      *
      * @return The next prayer time index
      * @see #getNextPrayerTime()
@@ -72,6 +75,7 @@ public interface PrayerInterface {
      *
      * @return An array of prayer times for the current day
      */
+    @Nullable
     List<Date> getCurrentDayPrayerTimes();
 
     /**
@@ -104,6 +108,8 @@ public interface PrayerInterface {
      * Check whether the prayer times is already loaded.
      */
     boolean isPrayerTimesLoaded();
+
+    void onPrayerExtensionCrashed(Throwable t);
 
     void addPrayerListener(PrayerListener listener);
 
