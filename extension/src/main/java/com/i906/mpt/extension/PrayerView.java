@@ -10,8 +10,6 @@ import android.widget.FrameLayout;
  */
 public abstract class PrayerView extends FrameLayout implements PrayerInterface.PrayerListener {
 
-    protected static final int VERSION = 1;
-
     protected PrayerInterface mInterface;
 
     public PrayerView(Context context) {
@@ -30,7 +28,7 @@ public abstract class PrayerView extends FrameLayout implements PrayerInterface.
      * Used by the host to determine the PrayerView's version.
      */
     public final int getExtensionVersion() {
-        return VERSION;
+        return getResources().getInteger(R.integer.mpt_extension_version);
     }
 
     /**
