@@ -102,8 +102,7 @@ public class CountdownView extends PrayerView {
     private long getRemaining() {
         Date d = getInterface().getNextPrayerTime();
         if (d == null) return 0;
-        Date n = new Date();
-        return d.getTime() - n.getTime();
+        return d.getTime() - System.currentTimeMillis();
     }
 
     private void startUpdating() {
