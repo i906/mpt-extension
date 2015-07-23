@@ -1,4 +1,4 @@
-package com.i906.mpt.extension.countdownview.view;
+package com.i906.mpt.extension.countdown.view;
 
 import android.content.Context;
 import android.os.Handler;
@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 import com.i906.mpt.extension.PrayerInterface;
 import com.i906.mpt.extension.PrayerView;
-import com.i906.mpt.extension.countdownview.R;
+import com.i906.mpt.extension.countdown.R;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

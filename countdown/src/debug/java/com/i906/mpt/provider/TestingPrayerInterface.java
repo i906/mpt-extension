@@ -1,4 +1,4 @@
-package com.i906.mpt.extension.countdownview.view;
+package com.i906.mpt.provider;
 
 import com.i906.mpt.extension.PrayerInterface;
 
@@ -98,6 +98,20 @@ public class TestingPrayerInterface implements PrayerInterface {
     @Override
     public List<Date> getCurrentDayPrayerTimes() {
         return mTestDateList;
+    }
+
+    @Override
+    public boolean prayerHasPassed(int prayer) {
+        Calendar n = Calendar.getInstance();
+        Calendar s = Calendar.getInstance();
+        List<Date> cdpt = getCurrentDayPrayerTimes();
+
+        if (cdpt != null) {
+            s.setTime(cdpt.get(prayer));
+            return n.after(s);
+        } else {
+            return false;
+        }
     }
 
     @Override

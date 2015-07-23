@@ -109,6 +109,11 @@ public interface PrayerInterface {
      */
     boolean isPrayerTimesLoaded();
 
+    /**
+     * Check whether the given prayer has already passed.
+     */
+    boolean prayerHasPassed(int prayer);
+
     void onPrayerExtensionCrashed(Throwable t);
 
     void addPrayerListener(PrayerListener listener);

@@ -1,6 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.i906.mpt.extension">
 
+    <uses-permission android:name="com.i906.mpt.permission.MPT_EXTENSION" />
+
     <application>
 
         <meta-data
