@@ -11,6 +11,20 @@
             android:name="com.i906.mpt.extension.ExtensionInfo"
             android:resource="@xml/extension_info" />
 
+        <activity
+            android:name=".ui.InfoActivity"
+            android:label="@string/app_name"
+            android:theme="@style/InfoTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.INFO" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.i906.mpt.action.EXTENSION_INFO" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
     </application>
 
 </manifest>

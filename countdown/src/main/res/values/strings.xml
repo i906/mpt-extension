@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">MPT Countdown Extension</string>
+
+    <!-- CountdownView -->
+
     <string name="label_retry">Retry</string>
 
     <plurals name="label_hour">
@@ -16,5 +19,12 @@
         <item quantity="one">second</item>
         <item quantity="other">seconds</item>
     </plurals>
+
+    <!-- InfoActivity -->
+
+    <string name="label_install">Get MPT on Play Store</string>
+    <string name="label_open">Open MPT settings</string>
+    <string name="text_requirement">This extension requires Malaysia Prayer Times version 2 to function.</string>
+    <string name="text_settings">Open MPT settings to use this extension in MPT. </string>
 
 </resources>
