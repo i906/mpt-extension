@@ -9,10 +9,11 @@ import android.net.Uri;
 /**
  * @author Noorzaini Ilhami
  */
-public class Utils {
+public final class Utils {
 
     public static final String MPT_PACKAGE = "com.i906.mpt";
     public static final String ACTION_EXTENSION_PICKER = "com.i906.mpt.action.EXTENSION_PICKER";
+    public static final String ACTION_MAIN_SCREEN = "com.i906.mpt.action.MAIN_SCREEN";
 
     public static boolean isMptAvailable(Context context) {
         PackageManager packageManager = context.getPackageManager();

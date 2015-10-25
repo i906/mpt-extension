@@ -1,17 +1,26 @@
 <resources>
 
+    <string name="mpt_prayer_imsak">Imsak</string>
+    <string name="mpt_prayer_subuh">Subuh</string>
+    <string name="mpt_prayer_syuruk">Syuruk</string>
+    <string name="mpt_prayer_dhuha">Dhuha</string>
+    <string name="mpt_prayer_zohor">Zohor</string>
+    <string name="mpt_prayer_asar">Asar</string>
+    <string name="mpt_prayer_maghrib">Maghrib</string>
+    <string name="mpt_prayer_isyak">Isyak</string>
+
     <string-array name="mpt_prayer_names">
-        <item>Imsak</item>
-        <item>Subuh</item>
-        <item>Syuruk</item>
-        <item>Dhuha</item>
-        <item>Zohor</item>
-        <item>Asar</item>
-        <item>Maghrib</item>
-        <item>Isyak</item>
+        <item>@string/mpt_prayer_imsak</item>
+        <item>@string/mpt_prayer_subuh</item>
+        <item>@string/mpt_prayer_syuruk</item>
+        <item>@string/mpt_prayer_dhuha</item>
+        <item>@string/mpt_prayer_zohor</item>
+        <item>@string/mpt_prayer_asar</item>
+        <item>@string/mpt_prayer_maghrib</item>
+        <item>@string/mpt_prayer_isyak</item>
     </string-array>
 
-    <string-array name="mpt_hijri_dates">
+    <string-array name="mpt_hijri_months">
         <item>Muharram</item>
         <item>Safar</item>
         <item>Rabiulawal</item>
@@ -24,6 +33,51 @@
         <item>Syawal</item>
         <item>Zulkaedah</item>
         <item>Zulhijjah</item>
+    </string-array>
+
+    <string-array name="mpt_hijri_months_short">
+        <item>Muh</item>
+        <item>Saf</item>
+        <item>Raw</item>
+        <item>Rak</item>
+        <item>Jaw</item>
+        <item>Jak</item>
+        <item>Rej</item>
+        <item>Syb</item>
+        <item>Ram</item>
+        <item>Syw</item>
+        <item>Zkh</item>
+        <item>Zhj</item>
+    </string-array>
+
+    <string-array name="mpt_masihi_months">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+
+    <string-array name="mpt_masihi_months_short">
+        <item>Jan</item>
+        <item>Feb</item>
+        <item>Mar</item>
+        <item>Apr</item>
+        <item>May</item>
+        <item>Jun</item>
+        <item>Jul</item>
+        <item>Aug</item>
+        <item>Sep</item>
+        <item>Oct</item>
+        <item>Nov</item>
+        <item>Dec</item>
     </string-array>
 
     <string name="mpt_error_no_location">Oops! Have you enabled your location settings?</string>
