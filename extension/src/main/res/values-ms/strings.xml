@@ -2,6 +2,7 @@
 
     <string name="mpt_error_no_location">Sudahkah anda membenarkan akses lokasi?</string>
     <string name="mpt_error_no_network">Sudahkah anda memeriksa sambungan internet anda?</string>
+    <string name="mpt_error_play_service">Terdapat masalah dengan Play Services!</string>
     <string name="mpt_error_undetectable_location">Kami tidak dapat mengenali lokasi anda!</string>
     <string name="mpt_error_unexpected">Kami tidak menjangka masalah ini!</string>
 

@@ -19,8 +19,13 @@ public interface PrayerInterface extends CurrentData, Prayer, HijriDate {
     int ERROR_CONVERSION = 2;
     int ERROR_HTTP = 3;
     int ERROR_LOCATION = 4;
+    int ERROR_PLAY_SERVICES = 5;
 
+    String LOCATION_ERROR_ADDRESS = "LOCATION_ERROR_ADDRESS";
+    String LOCATION_ERROR_PLACE = "LOCATION_ERROR_PLACE";
+    String LOCATION_ERROR_GEOCODER = "LOCATION_ERROR_GEOCODER";
 
+    String PLAY_SERVICE_UPDATE_REQUIRED = "PLAY_SERVICE_ERROR_2";
 
     /**
      * Retrieves the host's version.
